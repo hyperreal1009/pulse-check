@@ -75,6 +75,12 @@ python pulsecheck.py --verbose
 python pulsecheck.py --no-archive
 ```
 
+#### `--purge`
+- **Description**: If enabled, the script will generate a backup copy of your html file and remove invalid links before checking.
+```bash
+python pulsecheck.py --purge
+```
+
 ## 📝 Requirements
 
 - Python 3.x
@@ -89,28 +95,32 @@ python pulsecheck.py --no-archive
 - 💚 Keeps your bookmark list lean and mean!
 
 ## 📝 Changelog
-[v1.2.0] - 2023-10-01
-Added
---purge argument to remove invalid links before checking, also generates a .bak backup file.
-Enhanced logging during the purging process.
-Dead links and other status codes are now archived in HTML format for easy upload to a browser.
-Detailed argument description in the README file.
-[v1.1.0] - 2023-09-25
-Added
---filename argument to specify a custom bookmarks file path.
---timeout argument for specifying the request timeout in seconds.
---smart-mode argument to randomize timeouts to avoid spam flags.
---verbose argument for verbose logging.
---no-archive argument to disable dead link archiving.
-Changed
-Updated check_links to also capture other status codes besides 200 and 404.
-[v1.0.0] - 2023-09-20
-Added
-Initial version of PulseCheck.
-Supports reading an HTML file of bookmarks.
-Checks each link for a 200 HTTP status code.
-Archives dead links in a dead_links.txt file.
-Creates a new HTML file with live links only.
+
+### [v1.2.0] - 2023-10-01
+#### Added
+- `--purge` argument to remove invalid links before checking, also generates a `.bak` backup file.
+- Enhanced logging during the purging process.
+- Dead links and other status codes are now archived in HTML format for easy upload to a browser.
+- Detailed argument description in the README file.
+
+### [v1.1.0] - 2023-09-25
+#### Added
+- `--filename` argument to specify a custom bookmarks file path.
+- `--timeout` argument for specifying the request timeout in seconds.
+- `--smart-mode` argument to randomize timeouts to avoid spam flags.
+- `--verbose` argument for verbose logging.
+- `--no-archive` argument to disable dead link archiving.
+
+#### Changed
+- Updated `check_links` to also capture other status codes besides 200 and 404.
+
+### [v1.0.0] - 2023-09-20
+#### Added
+- Initial version of PulseCheck.
+- Supports reading an HTML file of bookmarks.
+- Checks each link for a 200 HTTP status code.
+- Archives dead links in a `dead_links.txt` file.
+- Creates a new HTML file with live links only.
 
 
 ## 👥 Contribution
